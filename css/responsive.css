@@ -1,0 +1,245 @@
+/* Responsive Breakpoints
+ * Mobile: < 768px
+ * Tablet: 768px - 1024px
+ * Desktop: > 1024px
+ */
+
+/* Mobile Navigation */
+@media (max-width: 1024px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: var(--surface);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-2);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path var(--transition-normal) var(--easing);
+    z-index: var(--z-fixed);
+  }
+
+  .main-nav.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: var(--space-2);
+  }
+
+  .mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+}
+
+/* Tablet and Mobile */
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding-top: calc(var(--space-8) * 1.5);
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: var(--space-6);
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* About Section */
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stats Container */
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4) var(--space-6);
+  }
+
+  .footer-logo {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile Only */
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-filter {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+    margin-bottom: var(--space-3);
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+
+  .projects-filter::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+  }
+
+  /* Contact */
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stats */
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-2);
+    text-align: center;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .testimonial-controls {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-4);
+  }
+}
+
+/* Custom media query for hero section layout in large screens */
+@media (min-width: 1200px) {
+  .hero-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    transform: none;
+    right: 0;
+    top: 0;
+  }
+
+  .hero-section {
+    padding: calc(var(--space-8) * 1.5) 0 var(--space-8);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Dark mode specific overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+
+  body:not(.light-mode):not(.dark-mode) {
+    --background: var(--dark-background);
+    --surface: var(--dark-surface);
+    --border: var(--dark-border);
+    --text-primary: var(--dark-text-primary);
+    --text-secondary: var(--dark-text-secondary);
+    --text-tertiary: var(--dark-text-tertiary);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    color: var(--text-primary);
+    background-color: var(--background);
+  }
+}
