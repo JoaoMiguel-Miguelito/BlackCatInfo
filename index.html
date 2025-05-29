@@ -1,14 +1,184 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="BlackCatInfo - Soluções em tecnologia para seu negócio. Desenvolvimento web, manutenção de computadores e dashboards profissionais." />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BlackCatInfo - Soluções em tecnologia para seu negócio. Desenvolvimento web, manutenção de computadores e dashboards profissionais.">
     <title>BlackCatInfo - Soluções em Tecnologia</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon"></span>
+                    <h1>Black<span>Cat</span>Info</h1>
+                </div>
+                <nav class="nav-desktop">
+                    <a href="#servicos">Serviços</a>
+                    <a href="#portfolio">Portfólio</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-mobile">
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Soluções em <span>Tecnologia</span> para o seu Negócio</h2>
+                <p>Desenvolvimento de sites, manutenção de computadores, automação com dados e dashboards profissionais customizados para suas necessidades.</p>
+                <a href="#servicos" class="btn-primary">Conheça Nossos Serviços</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <section id="servicos" class="services">
+        <div class="container">
+            <h3>Nossos Serviços</h3>
+            <p class="section-subtitle">Oferecemos soluções completas em tecnologia para alavancar seu negócio no mundo digital.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon web-icon"></div>
+                    <h4>Desenvolvimento Web</h4>
+                    <p>Criação de sites modernos, responsivos e otimizados para SEO, com foco em usabilidade e conversão de visitantes em clientes.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon maintenance-icon"></div>
+                    <h4>Montagem e Manutenção</h4>
+                    <p>Serviços especializados de hardware e software para deixar sua máquina rápida, segura e otimizada para suas necessidades específicas.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon dashboard-icon"></div>
+                    <h4>Power BI & Excel</h4>
+                    <p>Dashboards e relatórios inteligentes que transformam dados em decisões estratégicas, impulsionando o crescimento do seu negócio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h3>Nosso Portfólio</h3>
+            <p class="section-subtitle">Conheça alguns dos nossos projetos recentes e como temos ajudado empresas a alcançarem seus objetivos.</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg" alt="Dashboard de Vendas">
+                    </div>
+                    <div class="portfolio-content">
+                        <h4>Dashboard de Vendas - Power BI</h4>
+                        <p>Dashboard interativo com métricas de vendas por região e produto, incluindo análises de tendências e previsões.</p>
+                        <div class="tags">
+                            <span>Power BI</span>
+                            <span>Análise de Dados</span>
+                            <span>Dashboards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg" alt="Site de Consultoria">
+                    </div>
+                    <div class="portfolio-content">
+                        <h4>Site de Consultoria Financeira</h4>
+                        <p>Desenvolvimento de site institucional responsivo com formulário de contato integrado e SEO otimizado.</p>
+                        <div class="tags">
+                            <span>Web Design</span>
+                            <span>UI/UX</span>
+                            <span>SEO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <div class="container">
+            <h3>Entre em Contato</h3>
+            <p class="section-subtitle">Tem alguma dúvida ou precisa de uma consultoria personalizada? Preencha o formulário abaixo.</p>
+            
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary">
+                    <span class="btn-icon"></span>
+                    Enviar Mensagem
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon"></span>
+                        <h2>Black<span>Cat</span>Info</h2>
+                    </div>
+                    <p>Soluções em tecnologia para impulsionar seu negócio no mundo digital.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#portfolio">Portfólio</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p>Itararé, São Paulo, SP - Brasil</p>
+                    <p>(15) 99156-0824</p>
+                    <p>contato@blackcatinfo.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BlackCatInfo - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/+5515991560824" target="_blank" class="whatsapp-button" aria-label="Contato via WhatsApp">
+        <span class="whatsapp-icon"></span>
+        <span class="whatsapp-tooltip">Fale conosco</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
 </html>
