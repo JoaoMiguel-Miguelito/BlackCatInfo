@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // Here you would typically send the form data to your server
-        console.log('Formulario enviado:', formData);
+        console.log('Form submitted:', formData);
 
         // Show success message
         const button = contactForm.querySelector('button');
