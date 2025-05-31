@@ -97,3 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(element);
     });
 });
+
+    const texto = 'Quero contratar os seus serviços.'
+        
+    const textoURL = encodeURIComponent(texto);
+
+    const numeroWhatsApp = '5515991560824';
+
+    const url = `https://wa.me/${numeroWhatsApp}`;
+
+    window.open(url, '_blank');
