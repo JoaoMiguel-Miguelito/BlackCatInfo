@@ -204,7 +204,7 @@ h3::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('midia/BackGround.jpeg') center/cover;
+    background: url('https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover;
     opacity: 0.1;
 }
 
@@ -554,25 +554,4 @@ h3::after {
 
 .fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
-}
-@media (min-width: 768px) {
-    .nav-mobile {
-        display: none !important;
-    }
-}
-/* Esconde nav-mobile no desktop */
-@media (min-width: 768px) {
-    .nav-mobile {
-        display: none !important;
-    }
-    .menu-toggle {
-        display: none !important;
-    }
-}
-
-/* Esconde nav-desktop no mobile */
-@media (max-width: 767px) {
-    .nav-desktop {
-        display: none !important;
-    }
 }
