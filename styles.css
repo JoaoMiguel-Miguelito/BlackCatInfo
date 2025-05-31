@@ -555,3 +555,8 @@ h3::after {
 .fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
 }
+@media (min-width: 768px) {
+    .nav-mobile {
+        display: none !important;
+    }
+}
